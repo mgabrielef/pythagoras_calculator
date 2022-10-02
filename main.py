@@ -1,16 +1,24 @@
 from flask import Flask, render_template, request
 import math
 
+
+#Iniciando app
 app = Flask(__name__)
 
+
+#Definindo rota inicial
 @app.route("/")
 def index():
     return render_template("index.html")
 
+
+#Definindo rota para página "CALCULAR HIPOTENUSA"    
 @app.route("/hipotenusa", methods=["GET"])
 def pagHipotenusa():
     return render_template("hipotenusa.html")
 
+
+#Criando função para calcular o valor da hipotenusa
 @app.route("/resultadoHipotenusa", methods=["POST", "GET"])
 def calculaHipotenusa():
   catetoA = int(request.form['catetoA'])
@@ -27,11 +35,15 @@ def calculaHipotenusa():
     msg = "Número inválido"
     msg2 = "Insira novos números"
     return render_template("resultadoHipotenusa.html", value=msg, info=msg2)    
-     
+
+
+#Definindo rota para página "CALCULAR CATETO ADJACENTE"     
 @app.route("/catetoAdj", methods=["GET"])
 def pagCatetoAdj():
   return render_template("catetoAdj.html")
 
+
+#Criando função para calcular o valor do Cateto Adjacente
 @app.route("/resultadoCatetoAdj", methods=["POST", "GET"])
 def calculaCatetoAdj():
   catetoX = int(request.form['catetoX'])
@@ -43,10 +55,14 @@ def calculaCatetoAdj():
     msg = "Número inválido\nInsira novos números"
     return render_template("resultadoHipotenusa.html", value=msg)
 
+
+#Definindo rota para página "CALCULAR CATETO OPOSTO" 
 @app.route("/catetoOp", methods=["GET"])
 def pagCatetoOp():
   return render_template("catetoOp.html")
 
+
+#Criando função para calcular o valor do Cateto Oposto
 @app.route("/resultadoCatetoOp", methods=["POST", "GET"])
 def calculaCatetoOp():
   catetoX = int(request.form['catetoX'])
@@ -59,4 +75,5 @@ def calculaCatetoOp():
     return render_template("resultadoHipotenusa.html", value=msg)
 
 
+#Rodando app
 app.run(debug=True)
