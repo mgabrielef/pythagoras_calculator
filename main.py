@@ -53,7 +53,7 @@ def calculaCatetoAdj():
     return render_template("resultadoCatetoAdj.html", value = catetoY)
   else:
     msg = "Número inválido\nInsira novos números"
-    return render_template("resultadoHipotenusa.html", value=msg)
+    return render_template("resultadoCatetoAdj.html", value=msg)
 
 
 #Definindo rota para página "CALCULAR CATETO OPOSTO" 
@@ -72,7 +72,7 @@ def calculaCatetoOp():
     return render_template("resultadoCatetoOp.html", value = catetoY)
   else:
     msg = "Número inválido\nInsira novos números"
-    return render_template("resultadoHipotenusa.html", value=msg)
+    return render_template("resultadoCatetoOp.html", value=msg)
 
 
 #Rodando app
