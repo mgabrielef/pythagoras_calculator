@@ -73,7 +73,7 @@ def calculaCatetoOp():
     return render_template("resultadoCatetoOp.html", value=msg)
   
 ```
-Calcular adjacente
+Calcular cateto adjacente
 
 ```python
 def calculaCatetoAdj():
