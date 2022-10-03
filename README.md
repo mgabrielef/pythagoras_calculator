@@ -30,7 +30,7 @@ $ pip install -U Flask
 
 # Métodos do projeto
 
-Calcular hipotenusa
+Calcular hipotenusa:
 
 ```python
 def calculaHipotenusa():
@@ -55,7 +55,7 @@ def calculaHipotenusa():
   
 ```  
 
-Calcular cateto oposto
+Calcular cateto oposto:
 
 ```python
 def calculaCatetoOp():
@@ -73,7 +73,7 @@ def calculaCatetoOp():
     return render_template("resultadoCatetoOp.html", value=msg)
   
 ```
-Calcular cateto adjacente
+Calcular cateto adjacente:
 
 ```python
 def calculaCatetoAdj():
