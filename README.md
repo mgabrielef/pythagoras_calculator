@@ -51,7 +51,7 @@ Calcular adjacente
 
 Para rodar o código:
 ```
-$ python run app.py
+python app.py
 ```
 
 
